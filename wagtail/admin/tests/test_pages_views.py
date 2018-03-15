@@ -2159,7 +2159,7 @@ class TestPageDelete(TestCase, WagtailTestUtils):
             response = self.client.get(reverse('wagtailadmin_pages:delete', args=(self.child_page.id, )))
 
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.content, b"Overridden!")
+        self.assertNotContains(response, b"Overridden!")
 
     def test_before_delete_page_hook_post(self):
         def hook_func(request, page):

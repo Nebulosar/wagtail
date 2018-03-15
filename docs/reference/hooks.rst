@@ -457,9 +457,7 @@ Hooks for customising the way users are directed through the process of creating
 ``before_delete_page``
 ~~~~~~~~~~~~~~~~~~~~~~
 
-  Called at the beginning of the "delete page" view passing in the request and the page object.
-
-  Uses the same behavior as ``before_create_page``.
+  Do something before a ``Page`` object is deleted. Uses the same behavior as ``before_create_page``.
 
 
 .. _after_edit_page:
